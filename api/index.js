@@ -8,7 +8,7 @@ export function searchMovie(movie, page = 1) {
     axios
       .get(`${baseUrl}`, {
         params: {
-          apikey: process.env.PRIVATE_KEY,
+          apikey: this.$config.apikey,
           type: 'movie',
           t: movie,
           page,
@@ -28,7 +28,7 @@ export function getMovie(id) {
     axios
       .get(`${baseUrl}`, {
         params: {
-          apikey: process.env.PRIVATE_KEY,
+          apikey: this.$config.apikey,
           type: 'movie',
           i: id,
         },
@@ -47,7 +47,7 @@ export function getPosterImage(id) {
     axios
       .get(`${baseUrl}`, {
         params: {
-          apikey: process.env.PRIVATE_KEY,
+          apikey: this.$config.apikey,
           type: 'movie',
           t: id,
         },
@@ -66,7 +66,7 @@ export function filterMovieBySearch(movie) {
     axios
       .get(`${baseUrl}`, {
         params: {
-          apikey: process.env.PRIVATE_KEY,
+          apikey: this.$config.apikey,
           type: 'movie',
           s: movie,
         },
