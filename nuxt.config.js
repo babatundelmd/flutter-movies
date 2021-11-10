@@ -53,4 +53,8 @@ export default {
   privateRuntimeConfig: {
     apiKey: process.env.PRIVATE_KEY || '',
   },
+
+  env: {
+    apiKey: process.env.PRIVATE_KEY || '',
+  },
 }
