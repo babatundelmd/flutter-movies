@@ -10,7 +10,6 @@
 
     <div class="listing__nav">
       <div v-if="loading">
-        <!-- eslint-disable-next-line -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="44"
