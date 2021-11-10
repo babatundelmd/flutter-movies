@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-const baseUrl = 'http://www.omdbapi.com'
-export const apiPosterUrl = 'http://img.omdbapi.com'
+const baseUrl = 'https://www.omdbapi.com'
+export const apiPosterUrl = 'https://img.omdbapi.com'
 
 export function searchMovie(movie, page = 1) {
   return new Promise((resolve, reject) => {
