@@ -8,7 +8,7 @@ export function searchMovie(movie, page = 1) {
     axios
       .get(`${baseUrl}`, {
         params: {
-          apikey: this.$config.apikey,
+          apiKey: process.env.apiKey,
           type: 'movie',
           t: movie,
           page,
