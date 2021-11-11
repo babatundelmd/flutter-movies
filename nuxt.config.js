@@ -51,6 +51,6 @@ export default {
   build: {},
 
   env: {
-    apiKey: process.env.API_KEY || '',
+    apiKey: process.env.PRIVATE_KEY || '',
   },
 }
