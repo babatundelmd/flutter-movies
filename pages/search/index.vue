@@ -84,8 +84,6 @@ export default {
       if (query.q) {
         const items = await filterMovieBySearch(query.q)
         return { items }
-      } else {
-        redirect('/')
       }
     } catch {
       error({ message: 'Page not found' })

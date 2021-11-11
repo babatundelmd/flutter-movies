@@ -9,7 +9,7 @@
           name="search"
           type="text"
           placeholder="Search for a movie..."
-          @keyup.enter="goToRoute"
+          @keyup.enter="search"
         />
       </div>
     </form>
@@ -29,17 +29,13 @@ export default {
   },
 
   methods: {
-    goToRoute() {
+    search() {
       if (this.query) {
         this.$router.push({
           name: 'search',
           query: { q: this.query },
         })
         this.query = ''
-      } else {
-        this.$router.push({
-          path: this.fromPage,
-        })
       }
     },
   },

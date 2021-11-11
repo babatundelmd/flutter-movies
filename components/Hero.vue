@@ -138,20 +138,6 @@ export default {
   }
 }
 
-.play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  padding: 0;
-  margin: 0;
-  background: none;
-  transform: translate(-50%, -50%);
-
-  @media (min-width: $breakpoint-medium) {
-    display: none;
-  }
-}
 
 .image {
   display: inline-block;
