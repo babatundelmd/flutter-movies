@@ -39,6 +39,20 @@
               <div :class="$style.info">
                 <span>{{ item.Year }}</span>
               </div>
+
+              <div :class="$style.info">
+                <span>{{ item.Runtime }}</span>
+              </div>
+            </div>
+
+            <div :class="$style.mindesc">
+              <div>Actors - {{ item.Actors }}</div>
+              <div>
+                Language - {{ item.Language }},
+                <span> Country - {{ item.Country }}</span>
+              </div>
+              <div v-if="item.Awards">Awards - {{ item.Awards }}</div>
+              <div>Rated - {{ item.Rated }}</div>
             </div>
 
             <div :class="$style.desc">
@@ -137,7 +151,6 @@ export default {
     }
   }
 }
-
 
 .image {
   display: inline-block;
@@ -244,7 +257,22 @@ export default {
   align-items: center;
 
   span {
-    margin-right: 0.9rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.mindesc {
+  display: block;
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+
+  @media (max-width: $breakpoint-small - 1) {
+    display: none;
+  }
+
+  @media (min-width: 1650px) {
+    font-size: 0.9vw;
   }
 }
 
